@@ -153,5 +153,9 @@ iframe {
 @media (max-width: 480px) {
     iframe {
         height: 550px; /* Adjust for very small screens to fit content without scrolling */
+        height: 500px; /* Adjust for very small screens to fit content without scrolling */
+        margin-top: 24px;
+        margin-bottom: 24px;
+        
     }
 }
