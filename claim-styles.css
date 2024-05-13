@@ -1,0 +1,157 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'space punk', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/Users/christian/Desktop/CANS-site/assets/claimbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 2000px rgba(31, 19, 38, 0.7);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limiting max width for better control on large screens */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures that the logo stays at top, content in middle, footer at bottom */
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Ensuring container takes full height */
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.logo {
+    margin-top: 24px;
+    width: 200px;
+    align-self: center; /* Centering logo */
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Additional padding might be adjusted depending on layout needs */
+    width: 100%; /* Ensures the iframe is responsive */
+}
+
+
+.content {
+    text-align: center;
+    color: #ffd9c8;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.statement {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 88px; /* Space between statement and button */
+    padding-left: 88px;
+    padding-right: 88px;
+}
+
+.cta-button {
+    background-color: #00bb7a;
+    color: #ffd9c8;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.social-link img {
+    width: 60px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .logo {
+        width: 150px;
+    }
+    .statement {
+        font-size: 1.8rem;
+    }
+    .cta-button {
+        font-size: 1.8rem;
+        padding: 8px 16px;
+    }
+    .social-link img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+    .statement {
+        font-size: 1.5rem;
+    }
+    .cta-button {
+        font-size: 1.5rem;
+        padding: 7px 14px;
+    }
+    .social-link img {
+        width: 40px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+    .statement {
+        font-size: 0.9rem;
+    }
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 6px 12px;
+    }
+    .social-link img {
+        width: 35px;
+    }
+}
+
+iframe {
+    max-width: 100%; /* Ensures iframe does not exceed the width of the container */
+    height: 650px; /* Default height, adjust based on content needs */
+    border: none; /* Removes frame border */
+    border-radius: 8px;
+}
+
+/* Responsive adjustments for the iframe based on different breakpoints */
+@media (max-width: 1024px) {
+    iframe {
+        height: 650px; /* Slightly smaller on medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 600px; /* Smaller height for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    iframe {
+        height: 550px; /* Adjust for very small screens to fit content without scrolling */
+    }
+}
